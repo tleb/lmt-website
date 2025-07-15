@@ -21,7 +21,7 @@ header {
     color: white;
     text-align: center;
 }
-header h1 { margin-bottom: 0; }
+header h1 { margin-bottom: 0; text-transform: uppercase; }
 header p { margin-top: .5em; }
 
 nav {
