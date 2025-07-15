@@ -32,7 +32,7 @@ nav {
     /*top: 0;*/
 }
 nav div {
-    max-width: 80ch;
+    max-width: 90ch;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
