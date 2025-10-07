@@ -15,6 +15,16 @@ header {
     padding:0;
     font-size: 2em;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 3rem;
+}
+header img {
+    max-width: 200px;
+    max-height: 200px;
+}
+header .text {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -74,6 +84,7 @@ hr {
     height: 1px;
     background: #ddd;
     border: 0;
+    /* TODO: scale with width */
     width: 70ch;
 }
 
