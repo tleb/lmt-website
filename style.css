@@ -22,6 +22,7 @@ header {
 header img {
     max-width: 200px;
     max-height: 200px;
+    filter: drop-shadow(0 0 .3em #000);
 }
 header .text {
     display: flex;
@@ -30,6 +31,7 @@ header .text {
     align-items: center;
     color: white;
     text-align: center;
+    text-shadow: #000 0 0 .5em;
 }
 header h1 { margin-bottom: 0; text-transform: uppercase; }
 header p { margin-top: .5em; }
