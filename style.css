@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background-image: url('img-trail.jpg');
+    background-image: url('photo-header.jpg');
     background-size: cover;
     background-position: center;
     height: calc(100vh - 3rem);
@@ -16,8 +16,14 @@ header {
     font-size: 2em;
     display: flex;
     justify-content: center;
+    align-items: flex-start;
+}
+header #header-content {
+    display: flex;
+    justify-content: center;
     align-items: center;
     column-gap: 3rem;
+    margin-top: 10vh;
 }
 header img {
     max-width: 200px;
@@ -36,7 +42,7 @@ header .text {
 header h1 { margin: auto 0 0; text-transform: uppercase; }
 header p { margin-top: .5em; }
 
-@media only screen and (max-width: 750px) { header { flex-direction: column; } }
+@media only screen and (max-width: 750px) { #header-content { flex-direction: column; } }
 
 nav {
     --nav-height: 3rem;
@@ -84,36 +90,69 @@ section {
     /*border-bottom: 1px solid #ddd;*/
 }
 
+section.with-images {
+    display: flex;
+    max-width: 100ch;
+    column-gap: 1em;
+    align-items: center;
+}
+section.with-images .text { width: 70%; }
+section.with-images .imgs { width: 30%; }
+section.with-images .imgs img { width: 100%; }
+
+@media only screen and (max-width: 600px) {
+    section.with-images {
+        flex-wrap: wrap;
+    }
+    section.with-images .text, section.with-images .imgs {
+        width: 100%;
+    }
+    section.with-images .imgs {
+        display: flex;
+        column-gap: 4px;
+        align-items: center;
+    }
+}
+
+section#lmt-conclusion {
+    max-width: 120ch;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section#lmt-conclusion p {
+    max-width: 70ch;
+}
+
+section#lmt-conclusion .imgs {
+    margin-top: 1.5em;
+    display: flex;
+    max-width: 120ch;
+    column-gap: .5em;
+    align-items: center;
+}
+section#lmt-conclusion .imgs img {
+    width: 25%;
+    flex-shrink: 1;
+    height: auto;
+}
+@media only screen and (max-width: 600px) {
+    section#lmt-conclusion .imgs {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        column-gap: 10px;
+        row-gap: 10px;
+    }
+    section#lmt-conclusion .imgs img {
+        width: 40%;
+    }
+}
+
 hr {
     height: 1px;
     background: #ddd;
     border: 0;
     max-width: 70ch;
-}
-
-section#bureau { max-width: 120ch; }
-
-#bureau-columns {
-    display: flex;
-    margin: 0 auto;
-    flex-wrap: wrap;
-}
-
-#bureau-columns div {
-    box-sizing: border-box;
-    width: 25%;
-    padding: 1em;
-}
-
-@media only screen and (max-width: 820px) { #bureau-columns div { width: 50%; } }
-@media only screen and (max-width: 600px) { #bureau-columns div { width: 100%; } }
-
-#bureau-columns div img {
-    border-radius: 50%;
-    max-width: 100%;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto;
 }
 
 footer {
